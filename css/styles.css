@@ -51,7 +51,8 @@ h2{
     color: #CA7D02 ;
 }
 .content_wrap{
-    width: 900px;
+    max-width: 900px;
+    width: 85%;
     margin: 0 auto;
     padding: 60px 0;
 }
@@ -84,29 +85,52 @@ header{
     padding: 25px 0;
 }
 
-.work_experience_item img{
-    float: left;
-    margin-right: 20px;
-}
-
 .work_experience_item h3{
     margin-top: 0;
 }
-.job_description{
-    margin-top: 8px;
+
+.work_experience img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 10px;
 }
+
+.job_description{
+    margin-top: 15px;
+    text-align: center;
+    width: 85%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.job_header p, .job_header h3{
+    text-align: center;
+}
+
 
 /* ***********************  EDUCATION  *********************** */
 
 .education{
-    
+    background-image: url(../images/education5.jpg);
+    background-size: cover;
+    color:  #FEFCFB;
+    padding-bottom: 15px;
+}
+
+.school_achievements{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
 }
 
 /* ***********************  FEATURED  *********************** */
 
 .featured{
-    background-color: #1282A2;
     padding-bottom: 12px;
+    /* background-image: url(../images/media2.jpg);
+    background-size: cover; */
 }
 
 .featured a{
@@ -115,6 +139,8 @@ header{
     text-decoration: none;
     padding: 8px;
     border-radius: 4px;
+    vertical-align: middle;
+    line-height: normal;
 }
 
 .featured a:hover{
@@ -128,6 +154,10 @@ header{
     text-align: center;
     column-gap: 10px;
     row-gap: 10px;
+}
+
+.featured .content_wrap{
+    padding-top: 0;
 }
    
 
@@ -149,8 +179,6 @@ footer{
 .contact_list{
     list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 
 .contact_list a{
@@ -158,6 +186,49 @@ footer{
     display: inline-block;
 }
 
+/* ***********************  MEDIA QUERIES  *********************** */
 
+@media screen and (min-width: 850px){
+    .work_experience_item img{
+        float: left;
+        margin-right: 20px;
+        width: 300px;
+    }
+    .job_description, .job_header h3, .job_header p{
+        text-align: unset;
+    }
+    .contact_list{
+        display: flex;
+        justify-content: center;
+    }
+}
 
+@media screen and (min-width: 1100px){
+    .education{
+        background-image: url(../images/education4.jpg);
+        background-size: cover;
+        background-position: top right;
+        color:  #FEFCFB;
+        padding-bottom: 15px;
+    }
+}
 
+@media screen and (max-width: 749px){
+    body{
+        font-size: 12px;
+    }
+    .content_wrap{
+        padding: 30px 0;
+    }
+    h1{
+        font-size: 60px;
+    }
+    h2{
+        font-size: 30px;
+        text-align: center;
+        margin-top: 0;
+    }
+    .contact_list a{
+        padding: 5px;
+    }
+}
